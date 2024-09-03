@@ -176,11 +176,11 @@
                 
                 number_layer {
                         bindings = <
-                                &none &kp CARET &kp 4 &kp 5 &kp 6 &kp PLUS                                              // top left
+                                &none &kp CARET &kp N4 &kp N5 &kp N6 &kp PLUS                                              // top left
                                 &kp SQT &kp LT &kp UP &kp GT &kp SEMI &none                                             // top right
-                                &none &kp 0 &kp 1 &kp 2 &kp 3 &kp ASTRK                                                 // mid left
+                                &none &kp N0 &kp N1 &kp N2 &kp N3 &kp ASTRK                                                 // mid left
                                 &kp DQT &kp LEFT &kp DOWN &kp RIGHT &kp HASH &none                                      // mid right
-                                &none &kp PRCNT &kp 7 &kp 8 &kp 9 &kp MINUS                                             // bot left
+                                &none &kp PRCNT &kp N7 &kp N8 &kp N9 &kp MINUS                                             // bot left
                                 &kp GRAVE &kp COLON &kp COMMA &kp DOT &kp FSLH &none                                    // bot right
                                 &none &none &none                                                                       // thm left
                                 &kp RET &kp SPACE &caps_word                                                            // thm right
