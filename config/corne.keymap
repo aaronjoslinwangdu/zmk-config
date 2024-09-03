@@ -69,9 +69,9 @@
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2
 
 // mod tap combos
-#define MT_LEFT_THUMB_BT 1 TAB
-#define MT_LEFT_THUMB 2 ESC
-#define MT_RIGHT_THUMB 3 RET
+#define MT_LEFT_THUMB_BT &mt 1 TAB
+#define MT_LEFT_THUMB &mt 2 ESC
+#define MT_RIGHT_THUMB &mt 3 RET
 
 // constants for hold tap 
 #define TAPPING_TERM_MS 200
@@ -122,8 +122,8 @@
                                 &kp M &rh_hr_mt RSHFT N &rh_hr_mt RGUI E &rh_hr_mt RALT I &rh_hr_mt RCTRL O &none       // mid right
                                 &none &kp Z &kp X &kp C &kp D &kp V                                                     // bot left
                                 &kp K &kp H &kp COMMA &kp DOT &kp FSLH &none                                            // bot right
-                                &mt MT_LEFT_THUMB_BT &kp BKSP &mt MT_LEFT_THUMB                                         // thm left
-                                &mt MT_RIGHT_THUMB &kp SPACE &caps_word                                                 // thm right
+                                MT_LEFT_THUMB_BT &kp BKSP MT_LEFT_THUMB                                                 // thm left
+                                MT_RIGHT_THUMB &kp SPACE &caps_word                                                     // thm right
                         >;
                 };
 
@@ -139,11 +139,11 @@
                                 &none &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                                                // top left
                                 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none                                                // top right
                                 &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                  // mid left
-                                &C_VOL_UP &C_MUTE &none &none &none &none &none                                         // mid right
+                                &kp C_VOL_UP &kp C_MUTE &none &none &none &none &none                                   // mid right
                                 &none &bt BT_CLR &none &none &none &none                                                // bot left
-                                &C_VOL_DOWN &none &none &none &none &none                                               // bot right
+                                &kp C_VOL_DOWN &none &none &none &none &none                                            // bot right
                                 &none &none &none                                                                       // thm left
-                                &none &none &none &none                                                                 // thm right
+                                &none &none &none                                                                       // thm right
                         >;
                 };
 
@@ -183,7 +183,7 @@
                                 &none &kp PRCNT &kp 7 &kp 8 &kp 9 &kp MINUS                                             // bot left
                                 &kp GRAVE &kp COLON &kp COMMA &kp DOT &kp FSLH &none                                    // bot right
                                 &none &none &none                                                                       // thm left
-                                &mt MT_RIGHT_THUMB &kp SPACE &caps_word                                                 // thm right
+                                &kp RET &kp SPACE &caps_word                                                            // thm right
                         >;
                 };
         };
