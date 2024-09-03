@@ -108,67 +108,82 @@
                 compatible = "zmk,keymap";
 
                 // default_layer (0)
-                // -----------------------------------------------------------------------------------------
-                // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-                // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-                // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-                //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+                // --------------------------------------------------------------------
+                // |  Q  |  W  |  F  |  P  |  B  |      |  J  |  L  |  U  |  Y  |  ;  |
+                // |  A  |  R  |  S  |  T  |  G  |      |  M  |  N  |  E  |  I  |  O  |
+                // |  Z  |  X  |  C  |  D  |  V  |      |  K  |  H  |  ,  |  .  |  /  |
+                //             | TAB | BSP | ESC |      | ENT | SPC | CPS |
 
                 default_layer {
                         bindings = <
-                                &none &kp Q &kp W &kp F &kp P &kp B     &kp J &kp L &kp U &kp Y &kp SQT &none                   // top row
-                                &none &lh_hr_mt LCTRL A &lh_hr_mt LALT R &lh_hr_mt LGUI S &lh_hr_mt LSHFT T &kp G               // middle row left
-                                &kp M &rh_hr_mt RSHFT N &rh_hr_mt RGUI E &rh_hr_mt RALT I &rh_hr_mt RCTRL O &none               // middle row right       
-                                &none &kp Z &kp X &kp C &kp D &kp V     &kp K &kp H &kp COMMA &kp DOT &kp FSLH &none            // bottom row
-                                &mt MT_LEFT_THUMB_BT &kp SPACE &mt MT_LEFT_THUMB   &mt MT_RIGHT_THUMB &kp BKSP &caps_word       // thumbs
+                                &none &kp Q &kp W &kp F &kp P &kp B                                                     // top left
+                                &kp J &kp L &kp U &kp Y &kp SEMI &none                                                  // top right
+                                &none &lh_hr_mt LCTRL A &lh_hr_mt LALT R &lh_hr_mt LGUI S &lh_hr_mt LSHFT T &kp G       // mid left
+                                &kp M &rh_hr_mt RSHFT N &rh_hr_mt RGUI E &rh_hr_mt RALT I &rh_hr_mt RCTRL O &none       // mid right
+                                &none &kp Z &kp X &kp C &kp D &kp V                                                     // bot left
+                                &kp K &kp H &kp COMMA &kp DOT &kp FSLH &none                                            // bot right
+                                &mt MT_LEFT_THUMB_BT &kp BKSP &mt MT_LEFT_THUMB                                         // thm left
+                                &mt MT_RIGHT_THUMB &kp SPACE &caps_word                                                 // thm right
                         >;
                 };
 
                 // bt_layer (1)
-                // -----------------------------------------------------------------------------------------
-                // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-                // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-                // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-                //                    | GUI |     | SPC |   | ENT |     | ALT |
+                // --------------------------------------------------------------------
+                // |  1  |  2  |  3  |  4  |  5  |      |  6  |  7  |  8  |  9  |  0  |
+                // | BT1 | BT2 | BT3 | BT4 | BT5 |      | VUP | VMT |     |     |     |
+                // | CLR |     |     |     |     |      | VDN |     |     |     |     |
+                //             |     |     |     |      |     |     |     |
 
                 bt_layer {
                         bindings = <
-                                &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-                                &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-                                &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                                                &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+                                &none &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                                                // top left
+                                &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none                                                // top right
+                                &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                  // mid left
+                                &C_VOL_UP &C_MUTE &none &none &none &none &none                                         // mid right
+                                &none &bt BT_CLR &none &none &none &none                                                // bot left
+                                &C_VOL_DOWN &none &none &none &none &none                                               // bot right
+                                &none &none &none                                                                       // thm left
+                                &none &none &none &none                                                                 // thm right
                         >;
                 };
 
                 // symbol_layer (2)
-                // -----------------------------------------------------------------------------------------
-                // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-                // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-                // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-                //                    | GUI |     | SPC |   | ENT |     | ALT |
+                // --------------------------------------------------------------------
+                // |  [  |  (  |  )  |  ]  |  +  |      |  '  |  <  |  @  |  >  |  ;  |
+                // |  ^  |  =  |  _  |  $  |  *  |      |  "  | SHT | GUI | ALT |  #  |
+                // |  %  |  &  |  \  |  !  |  -  |      |  `  |  :  |  ,  |  .  |  /  |
+                //             | TAB | BSP | ESC |      |     |     |     |
 
                 symbol_layer {
                         bindings = <
-                                &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
-                                &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
-                                &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
-                                                        &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+                                &none &kp LBKT &kp LPAR &kp RPAP &kp RBKT &kp PLUS                                      // top left
+                                &kp SQT &kp LT &kp AT &kp GT &kp SEMI &none                                             // top right
+                                &none &kp CARET &kp EQUAL &kp UNDER &kp DLLR &kp ASTRK                                  // mid left
+                                &kp DQT &kp RSHFT &kp RGUI  &kp RALT &kp HASH &none                                     // mid right
+                                &none &kp PRCNT &kp AMPS &kp BSLH &kp EXCL &kp MINUS                                    // bot left
+                                &kp GRAVE &kp COLON &kp COMMA &kp DOT &kp FSLH &none                                    // bot right
+                                &kp TAB &kp BKSP &kp ESC                                                                // thm left
+                                &none &none &none                                                                       // thm right
                         >;
                 };
 
                 // number_layer (3)
-                // -----------------------------------------------------------------------------------------
-                // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-                // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-                // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-                //                    | GUI |     | SPC |   | ENT |     | ALT |
+                // --------------------------------------------------------------------
+                // |  ^  |  4  |  5  |  6  |  +  |      |  '  |  <  |  UP |  >  |  ;  |
+                // |  0  |  1  |  2  |  3  |  *  |      |  "  | LFT | DWN | RGT |  #  |
+                // |  %  |  7  |  8  |  9  |  -  |      |  `  |  :  |  ,  |  .  |  /  |
+                //             |     |     |     |      | ENT | SPC | CPS |
                 
                 number_layer {
                         bindings = <
-                                &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
-                                &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
-                                &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
-                                                        &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+                                &none &kp CARET &kp 4 &kp 5 &kp 6 &kp PLUS                                              // top left
+                                &kp SQT &kp LT &kp UP &kp GT &kp SEMI &none                                             // top right
+                                &none &kp 0 &kp 1 &kp 2 &kp 3 &kp ASTRK                                                 // mid left
+                                &kp DQT &kp LEFT &kp DOWN &kp RIGHT &kp HASH &none                                      // mid right
+                                &none &kp PRCNT &kp 7 &kp 8 &kp 9 &kp MINUS                                             // bot left
+                                &kp GRAVE &kp COLON &kp COMMA &kp DOT &kp FSLH &none                                    // bot right
+                                &none &none &none                                                                       // thm left
+                                &mt MT_RIGHT_THUMB &kp SPACE &caps_word                                                 // thm right
                         >;
                 };
         };
