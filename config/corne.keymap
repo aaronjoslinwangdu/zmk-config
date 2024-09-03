@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 /*                              36 KEY MATRIX / LAYOUT MAPPING
 
@@ -131,7 +132,7 @@
                 // --------------------------------------------------------------------
                 // |  1  |  2  |  3  |  4  |  5  |      |  6  |  7  |  8  |  9  |  0  |
                 // | BT1 | BT2 | BT3 | BT4 | BT5 |      | VUP | VMT |     |     |     |
-                // | CLR |     |     |     |     |      | VDN |     |     |     |     |
+                // | CLR | ALL | DSC | USB | BLT |      | VDN |     |     |     |     |
                 //             |     |     |     |      |     |     |     |
 
                 bt_layer {
@@ -140,7 +141,7 @@
                                 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none                                                // top right
                                 &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                  // mid left
                                 &kp C_VOL_UP &kp C_MUTE &none &none &none &none &none                                   // mid right
-                                &none &bt BT_CLR &none &none &none &none                                                // bot left
+                                &none &bt BT_CLR &bt BT_CLR_ALL &bt BT_DISC &out OUT_USB &out OUT_BLE                   // bot left
                                 &kp C_VOL_DN &none &none &none &none &none                                              // bot right
                                 &none &none &none                                                                       // thm left
                                 &none &none &none                                                                       // thm right
@@ -152,7 +153,7 @@
                 // |  [  |  (  |  )  |  ]  |  +  |      |  '  |  <  |  @  |  >  |  ;  |
                 // |  ^  |  =  |  _  |  $  |  *  |      |  "  | SHT | GUI | ALT |  #  |
                 // |  %  |  &  |  \  |  !  |  -  |      |  `  |  :  |  ,  |  .  |  /  |
-                //             | TAB | BSP | ESC |      |     |     |     |
+                //             |     |     |     |      | RET | SPC | CPS |
 
                 symbol_layer {
                         bindings = <
@@ -162,8 +163,8 @@
                                 &kp DQT &kp RSHFT &kp RGUI  &kp RALT &kp HASH &none                                     // mid right
                                 &none &kp PRCNT &kp AMPS &kp BSLH &kp EXCL &kp MINUS                                    // bot left
                                 &kp GRAVE &kp COLON &kp COMMA &kp DOT &kp FSLH &none                                    // bot right
-                                &kp TAB &kp BKSP &kp ESC                                                                // thm left
-                                &none &none &none                                                                       // thm right
+                                &none &none &none                                                                       // thm left
+                                &kp RET &kp SPACE &caps_word                                                            // thm right
                         >;
                 };
 
@@ -172,7 +173,7 @@
                 // |  ^  |  4  |  5  |  6  |  +  |      |  '  |  <  |  UP |  >  |  ;  |
                 // |  0  |  1  |  2  |  3  |  *  |      |  "  | LFT | DWN | RGT |  #  |
                 // |  %  |  7  |  8  |  9  |  -  |      |  `  |  :  |  ,  |  .  |  /  |
-                //             |     |     |     |      | RET | SPC | CPS |
+                //             | TAB | BSP | ESC |      |     |     |     |
                 
                 number_layer {
                         bindings = <
@@ -182,8 +183,8 @@
                                 &kp DQT &kp LEFT &kp DOWN &kp RIGHT &kp HASH &none                                      // mid right
                                 &none &kp PRCNT &kp N7 &kp N8 &kp N9 &kp MINUS                                          // bot left
                                 &kp GRAVE &kp COLON &kp COMMA &kp DOT &kp FSLH &none                                    // bot right
-                                &none &none &none                                                                       // thm left
-                                &kp RET &kp SPACE &caps_word                                                            // thm right
+                                &kp TAB &kp BKSP &kp ESC                                                                // thm left
+                                &none &none &none                                                                       // thm right
                         >;
                 };
         };
