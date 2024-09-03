@@ -122,7 +122,7 @@
                                 &kp M &rh_hr_mt RSHFT N &rh_hr_mt RGUI E &rh_hr_mt RALT I &rh_hr_mt RCTRL O &none       // mid right
                                 &none &kp Z &kp X &kp C &kp D &kp V                                                     // bot left
                                 &kp K &kp H &kp COMMA &kp DOT &kp FSLH &none                                            // bot right
-                                LT_SYM LT_BLT &kp BKSP                                                                  // thm left
+                                LT_BLT &kp BKSP LT_SYM                                                                  // thm left
                                 LT_NUM &kp SPACE &caps_word                                                             // thm right
                         >;
                 };
