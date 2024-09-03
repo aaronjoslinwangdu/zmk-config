@@ -156,7 +156,7 @@
 
                 symbol_layer {
                         bindings = <
-                                &none &kp LBKT &kp LPAR &kp RPAP &kp RBKT &kp PLUS                                      // top left
+                                &none &kp LBKT &kp LPAR &kp RPAR &kp RBKT &kp PLUS                                      // top left
                                 &kp SQT &kp LT &kp AT &kp GT &kp SEMI &none                                             // top right
                                 &none &kp CARET &kp EQUAL &kp UNDER &kp DLLR &kp ASTRK                                  // mid left
                                 &kp DQT &kp RSHFT &kp RGUI  &kp RALT &kp HASH &none                                     // mid right
