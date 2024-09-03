@@ -120,7 +120,7 @@
                                 &none &lh_hr_mt LCTRL A &lh_hr_mt LALT R &lh_hr_mt LGUI S &lh_hr_mt LSHFT T &kp G               // middle row left
                                 &kp M &rh_hr_mt RSHFT N &rh_hr_mt RGUI E &rh_hr_mt RALT I &rh_hr_mt RCTRL O &none               // middle row right       
                                 &none &kp Z &kp X &kp C &kp D &kp V     &kp K &kp H &kp COMMA &kp DOT &kp FSLH &none            // bottom row
-                                &mt MT_LEFT_THUMB_BT LGUI &kp SPACE &mt MT_LEFT_THUMB   &mt MT_RIGHT_THUMB &kp BKSP &caps_word  // thumbs
+                                &mt MT_LEFT_THUMB_BT &kp SPACE &mt MT_LEFT_THUMB   &mt MT_RIGHT_THUMB &kp BKSP &caps_word       // thumbs
                         >;
                 };
 
