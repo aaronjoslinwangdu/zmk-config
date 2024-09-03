@@ -112,7 +112,7 @@
                 // |  Q  |  W  |  F  |  P  |  B  |      |  J  |  L  |  U  |  Y  |  ;  |
                 // |  A  |  R  |  S  |  T  |  G  |      |  M  |  N  |  E  |  I  |  O  |
                 // |  Z  |  X  |  C  |  D  |  V  |      |  K  |  H  |  ,  |  .  |  /  |
-                //             | TAB | ESC | BSP |      | SPC | RET | CPS |
+                //             | TAB | BSP | ESC |      | RET | SPC | CPS |
 
                 default_layer {
                         bindings = <
@@ -122,8 +122,8 @@
                                 &kp M &rh_hr_mt RSHFT N &rh_hr_mt RGUI E &rh_hr_mt RALT I &rh_hr_mt RCTRL O &none       // mid right
                                 &none &kp Z &kp X &kp C &kp D &kp V                                                     // bot left
                                 &kp K &kp H &kp COMMA &kp DOT &kp FSLH &none                                            // bot right
-                                LT_BLT LT_SYM &kp BKSP                                                                  // thm left
-                                &kp SPACE LT_NUM &caps_word                                                             // thm right
+                                LT_SYM LT_BLT &kp BKSP                                                                  // thm left
+                                LT_NUM &kp SPACE &caps_word                                                             // thm right
                         >;
                 };
 
@@ -152,7 +152,7 @@
                 // |  [  |  (  |  )  |  ]  |  +  |      |  '  |  <  |  @  |  >  |  ;  |
                 // |  ^  |  =  |  _  |  $  |  *  |      |  "  | SHT | GUI | ALT |  #  |
                 // |  %  |  &  |  \  |  !  |  -  |      |  `  |  :  |  ,  |  .  |  /  |
-                //             | TAB | ESC | BSP |      |     |     |     |
+                //             | TAB | BSP | ESC |      |     |     |     |
 
                 symbol_layer {
                         bindings = <
@@ -162,7 +162,7 @@
                                 &kp DQT &kp RSHFT &kp RGUI  &kp RALT &kp HASH &none                                     // mid right
                                 &none &kp PRCNT &kp AMPS &kp BSLH &kp EXCL &kp MINUS                                    // bot left
                                 &kp GRAVE &kp COLON &kp COMMA &kp DOT &kp FSLH &none                                    // bot right
-                                &kp TAB &kp ESC &kp BKSP                                                                // thm left
+                                &kp TAB &kp BKSP &kp ESC                                                                // thm left
                                 &none &none &none                                                                       // thm right
                         >;
                 };
@@ -172,7 +172,7 @@
                 // |  ^  |  4  |  5  |  6  |  +  |      |  '  |  <  |  UP |  >  |  ;  |
                 // |  0  |  1  |  2  |  3  |  *  |      |  "  | LFT | DWN | RGT |  #  |
                 // |  %  |  7  |  8  |  9  |  -  |      |  `  |  :  |  ,  |  .  |  /  |
-                //             |     |     |     |      | SPC | RET | CPS |
+                //             |     |     |     |      | RET | SPC | CPS |
                 
                 number_layer {
                         bindings = <
@@ -183,7 +183,7 @@
                                 &none &kp PRCNT &kp N7 &kp N8 &kp N9 &kp MINUS                                          // bot left
                                 &kp GRAVE &kp COLON &kp COMMA &kp DOT &kp FSLH &none                                    // bot right
                                 &none &none &none                                                                       // thm left
-                                &kp SPACE &kp RET &caps_word                                                            // thm right
+                                &kp RET &kp SPACE &caps_word                                                            // thm right
                         >;
                 };
         };
