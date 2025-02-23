@@ -75,9 +75,9 @@
 #define LT_NUM &lt 3 RET
 
 // constants for hold tap 
-#define TAPPING_TERM_MS 200
-#define QUICK_TAP_MS 150
-#define REQUIRE_PRIOR_IDLE_MS 150
+#define TAPPING_TERM_MS 175
+#define QUICK_TAP_MS 100
+#define REQUIRE_PRIOR_IDLE_MS 100
 
 / {
         behaviors {
